@@ -1,0 +1,17 @@
+To create hist for all data
+    data.hist(bins= ,figsize=( , ))
+to sepparate data equally 
+    from sklearn.model_selection import StratifiedShuffleSplit
+    split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+to see corr for data by plots
+    from pandas.plotting import scatter_matrix
+    attributes = [ , , , ]
+    scatter_matrix(data[attributes],figsize=( , ))
+To put missing values
+    from sklearn.impute import SimpleImputer
+    imputer = SimpleImputer(strategy="mean")
+    imputer.fit(data)
+To code categoral not(True\False) but(1,0,1)
+    from sklearn.preprocessing import LabelBinarizer
+    encoder = LabelBinarizer()
+    cat_1hot = encoder.fit_transform(data)
